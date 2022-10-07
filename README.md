@@ -1,12 +1,12 @@
-# credit-app
+## credit-app
 Credit app that requires wallet functionality. User has a wallet to receive loans they have been granted and also send the money for repayments; Using Node.js, Express and MongoDB.
 
-## Requirements
+### Requirements
 
- - [Node v7.6+](https://nodejs.org/en/download/current/) or [Docker Build Coming up](https://www.docker.com/)
+ - [Node v7.6+](https://nodejs.org/en/download/current/)
  - [NPM](https://yarnpkg.com/en/docs/install)
 
-## Getting Started
+### Getting Started
 
 Clone the repo:
 
@@ -23,7 +23,7 @@ npm install
 Install dependencies:
 
 ```bash
-npm install
+npm install ...
 ```
 
 Set environment variables:
@@ -32,24 +32,24 @@ Set environment variables:
 cp .env.example .env
 ```
 
-## Running Locally
+### Running Locally
 
 ```bash
 node index
 ```
 
-## API Endpoint
+### API Endpoint
 https://credit-app.herokuapp.com/
 
-## API Postman Collection for Testing
+### API Postman Collection for Testing
 https://www.getpostman.com/collections/7dd089bcd961b9f634e4
 
-## Testing Locally...
+### Testing Locally...
 
-## DB Diagram
+### DB Diagram
 https://dbdiagram.io/d/63404ff1f0018a1c5fba6880
 
-### First you need to Create a Customer
+#### First you need to Create a Customer
 ```bash
 curl -X POST \
   http://localhost:5000/api/v1/user/register \
@@ -59,7 +59,7 @@ curl -X POST \
   -d 'email=jhon_doe%40gmail.com&password=123456&name=Jhon%20Doe'
 ```
 
-### Login
+#### Login
 ```bash
 curl -X POST \
   http://localhost:5000/api/v1/user/login \
@@ -69,7 +69,7 @@ curl -X POST \
   -d 'email=jhon_doe%40gmail.com&password=123456'
 ```
 
-### Make a Deposit to your eWallet
+#### Make a Deposit to your eWallet
 ```bash
 curl -X POST \
   http://localhost:5000/api/v1/user/ewallet/deposit \
@@ -80,7 +80,7 @@ curl -X POST \
   -d 'amount=10'
 ```
 
-### Make a Transfer to another eWallet
+#### Make a Transfer to another eWallet
 ```bash
 curl -X POST \
   http://localhost:5000/api/v1/user/ewallet/transfer \
@@ -92,7 +92,7 @@ curl -X POST \
 ```
 
 
-### Triggers a Withdrawal from your eWallet
+#### Triggers a Withdrawal from your eWallet
 ```bash
 curl -X POST \
   http://localhost:5000/api/v1/user/ewallet/withdrawal \
